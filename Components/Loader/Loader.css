@@ -1,0 +1,23 @@
+
+.loader-circle{
+  height: 25px;
+  width: 25px;
+  border-radius: 25px;
+  animation: loader 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes loader{
+  0%{
+    border-bottom: 4px solid rgb(160, 160, 160);
+  }
+  33%{
+    border-left: 4px solid rgb(160, 160, 160);
+  }
+  67%{
+    border-top: 4px solid rgb(160, 160, 160);
+  }
+  100%{
+    border-right: 4px solid rgb(160, 160, 160);
+  }
+}

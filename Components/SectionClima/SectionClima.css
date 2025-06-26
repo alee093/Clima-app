@@ -1,0 +1,19 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+.section-clima{
+  width: 300px;
+}
+.titulo-temp{
+  padding: 0 15px;
+}
+.titulo{
+  font-size: 20px;
+  margin-top: 0;
+}
+.descripcion-icono{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
