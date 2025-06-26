@@ -1,6 +1,4 @@
-import React from "react";
-import { useState } from "react";
-
+// funcion para llamar a la api
 async function api(nombreCiudad) {
   const ciudad_sin_espacios = encodeURIComponent(nombreCiudad);
   const API_KEY = "7c7e59e0796f9aea6eae432b4519542a";
@@ -8,6 +6,10 @@ async function api(nombreCiudad) {
 
   try {
     const respuesta = await fetch(URL);
+
+    if (!respuesta.ok) {
+      throw new Error("Ciudad no encontrada");
+    }
     const datos = await respuesta.json();
     return datos;
   } catch (error) {
