@@ -1,7 +1,7 @@
 // funcion para llamar a la api
 async function api(nombreCiudad) {
   const ciudad_sin_espacios = encodeURIComponent(nombreCiudad);
-  const API_KEY = "7c7e59e0796f9aea6eae432b4519542a";
+  const API_KEY = import.meta.env.VITE_API_KEY;
   const URL = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad_sin_espacios}&appid=${API_KEY}&units=metric&lang=es`
 
   try {
