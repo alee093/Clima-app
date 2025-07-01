@@ -6,19 +6,19 @@ import SectionClima from '../Components/SectionClima/SectionClima.jsx'
 import './App.css'
 import Loader from '../Components/Loader/Loader.jsx'
 
-function App() {
+const App = () => {
   const [ciudad, setCiudad] = useState('')
   const [datosClima, setDatosClima] = useState(null)
   const [loading, setLoading] = useState(false)
 
-async function manejarBusqueda(nombreCiudad) {
-  setCiudad(nombreCiudad)
-  setLoading(true)
-  setDatosClima(null)
-  const datos = await api(nombreCiudad)
-  console.log(datos)
-  setDatosClima(datos)
-  setLoading(false)
+  const manejarBusqueda = async (nombreCiudad) => {
+    setCiudad(nombreCiudad)
+    setLoading(true)
+    setDatosClima(null)
+    const datos = await api(nombreCiudad)
+    console.log(datos)
+    setDatosClima(datos)
+    setLoading(false)
   }
   return(
     <div className='contenedor'>

@@ -2,7 +2,7 @@ import React from "react";
 import "./InputButton.css";
 import { useState } from "react";
 
-function InputButton ({onBuscar}) {
+const InputButton = ({ onBuscar }) => {
   const [ciudad, setCiudad] = useState("")
 
   const manejarSubmit = (event) => {

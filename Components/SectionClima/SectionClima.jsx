@@ -1,7 +1,7 @@
 import React from "react";
 import "./SectionClima.css"
 
-function SectionClima({datosClima}){
+const SectionClima = ({datosClima}) => {
   const ciudad = datosClima.name
   const pais = datosClima.sys.country
   const temperatura = datosClima.main.temp

@@ -1,8 +1,7 @@
 // funcion para llamar a la api
-async function api(nombreCiudad) {
-  const ciudad_sin_espacios = encodeURIComponent(nombreCiudad);
+const api = async (nombreCiudad) => {
   const API_KEY = import.meta.env.VITE_API_KEY;
-  const URL = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad_sin_espacios}&appid=${API_KEY}&units=metric&lang=es`
+  const URL = `https://api.openweathermap.org/data/2.5/weather?q=${nombreCiudad}&appid=${API_KEY}&units=metric&lang=es`
 
   try {
     const respuesta = await fetch(URL);
